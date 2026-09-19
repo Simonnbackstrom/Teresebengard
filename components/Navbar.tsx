@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -46,17 +47,15 @@ export default function Navbar() {
           maxWidth: 1400,
           margin: "0 auto",
         }} className="tb-nav-inner">
-          <Link href="/" style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: 22,
-            fontWeight: 700,
-            color: "#1C1410",
-            textDecoration: "none",
-            letterSpacing: "0.01em",
-            whiteSpace: "nowrap",
-          }}>
-            Terese Bengard
+          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+            <Image
+              src="/logo-pa-plats.png"
+              alt="På Plats – Terese Bengard"
+              width={110}
+              height={52}
+              style={{ objectFit: "contain", objectPosition: "left" }}
+              priority
+            />
           </Link>
 
           <nav style={{ display: "flex", alignItems: "center", gap: 40 }} className="tb-desktop-nav">

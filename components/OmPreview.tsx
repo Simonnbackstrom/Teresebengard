@@ -1,8 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function OmPreview() {
   return (
-    <section style={{ background: "#F5EEE9", padding: "120px 80px" }} className="tb-om-section">
+    <section style={{ background: "#FDFAF8", padding: "120px 80px" }} className="tb-om-section">
       <div className="tb-om-grid" style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
@@ -11,24 +12,20 @@ export default function OmPreview() {
         maxWidth: 1100,
         margin: "0 auto",
       }}>
-        {/* Bild-placeholder */}
+        {/* Foto */}
         <div style={{
-          background: "#DDD0CB",
-          borderRadius: 8,
+          borderRadius: 4,
           aspectRatio: "4/5",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          position: "relative",
+          overflow: "hidden",
         }}>
-          <p style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: "1.1rem",
-            color: "rgba(28,20,16,0.35)",
-            margin: 0,
-          }}>
-            Foto av Terese Bengard
-          </p>
+          <Image
+            src="/terese-portatt.jpg"
+            alt="Terese Bengard"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center top" }}
+            sizes="(max-width: 900px) 100vw, 50vw"
+          />
         </div>
 
         {/* Text */}

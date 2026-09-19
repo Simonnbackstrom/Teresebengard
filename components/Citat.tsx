@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const reviews = [
   {
-    quote: "Terese Bengard är en föreläsare som verkligen berör. Hon kombinerar djup kunskap om landsbygdsfrågor med en förmåga att nå fram till publiken på ett personligt och engagerande sätt. Föreläsningen gav oss nya perspektiv och satte igång viktiga samtal.",
+    quote: "Terese Bengard kombinerar djup kunskap om landsbygdsfrågor med en förmåga att nå fram till publiken på ett personligt och engagerande sätt. Föreläsningen gav oss nya perspektiv och satte igång viktiga samtal.",
     name: "Konferensdeltagare",
     title: "Kommunkonferens",
   },
@@ -12,7 +12,7 @@ const reviews = [
     title: "Regional konferens",
   },
   {
-    quote: "Boksamtalet med Terese var en fantastisk upplevelse. Hon har en unik förmåga att väcka tankar och skapa dialog. Boken Världens mittpunkt är ett måste för alla som är intresserade av landsbygdsfrågor.",
+    quote: "Boksamtalet med Terese var en fantastisk upplevelse. Hon väcker tankar och skapar dialog kring frågor som ofta förbises. Världens mittpunkt är ett måste.",
     name: "Bibliotekarie",
     title: "Folkbiblioteket",
   },
@@ -26,73 +26,73 @@ const reviews = [
 export default function Citat() {
   return (
     <section style={{ background: "#FDFAF8", padding: "120px 80px" }} className="tb-citat-section">
-      <div style={{ textAlign: "center", marginBottom: 64 }}>
+      <div style={{ maxWidth: 900, margin: "0 auto" }}>
         <p style={{
           fontFamily: "var(--font-sans)",
-          fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-          color: "#C4607A", fontWeight: 600, margin: "0 0 16px",
+          fontSize: 11, letterSpacing: "0.35em", textTransform: "uppercase",
+          color: "#C4607A", fontWeight: 600, margin: "0 0 72px",
         }}>
           Vad de säger
         </p>
-        <h2 style={{
-          fontFamily: "var(--font-display)",
-          fontStyle: "italic",
-          fontSize: "clamp(1.8rem, 2.8vw, 3rem)",
-          fontWeight: 700, color: "#1C1410", margin: 0, lineHeight: 1.1,
-        }}>
-          Det säger de som bokat Terese.
-        </h2>
-      </div>
 
-      <div className="tb-citat-grid" style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(2, 1fr)",
-        gap: 2,
-        maxWidth: 1100,
-        margin: "0 auto 64px",
-      }}>
         {reviews.map((r, i) => (
           <div key={i} style={{
-            padding: "44px 40px",
-            background: i % 2 === 1 ? "#F5EEE9" : "#FDFAF8",
-            borderTop: "2px solid #C4607A",
-            display: "flex",
-            flexDirection: "column",
-            gap: 20,
-          }}>
-            <span style={{ color: "#C4607A", fontSize: 15, letterSpacing: 3 }}>★★★★★</span>
-            <p style={{
-              fontFamily: "Georgia, serif",
-              fontStyle: "italic",
-              fontSize: 15, lineHeight: 1.9,
-              color: "rgba(28,20,16,0.75)",
-              margin: 0, flexGrow: 1,
+            borderTop: "1px solid rgba(28,20,16,0.1)",
+            padding: "52px 0",
+            display: "grid",
+            gridTemplateColumns: "64px 1fr",
+            gap: "0 32px",
+          }} className="tb-citat-row">
+            <span style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "5rem",
+              fontWeight: 700,
+              color: "#C4607A",
+              lineHeight: 0.8,
+              userSelect: "none",
             }}>
-              &ldquo;{r.quote}&rdquo;
-            </p>
+              &ldquo;
+            </span>
             <div>
-              <p style={{ margin: 0, fontSize: 14, fontWeight: 600, color: "#1C1410" }}>{r.name}</p>
-              <p style={{ margin: "4px 0 0", fontSize: 12, color: "rgba(28,20,16,0.4)" }}>{r.title}</p>
+              <p style={{
+                fontFamily: "var(--font-display)",
+                fontStyle: "italic",
+                fontSize: "clamp(1.1rem, 1.6vw, 1.4rem)",
+                lineHeight: 1.65,
+                color: "#1C1410",
+                margin: "0 0 24px",
+              }}>
+                {r.quote}
+              </p>
+              <p style={{
+                fontFamily: "var(--font-sans)",
+                fontSize: 13, fontWeight: 500,
+                color: "rgba(28,20,16,0.5)",
+                margin: 0,
+              }}>
+                {r.name} &middot; {r.title}
+              </p>
             </div>
           </div>
         ))}
-      </div>
 
-      <div style={{ textAlign: "center" }}>
-        <Link href="/kontakt" className="tb-btn" style={{
-          display: "inline-flex", alignItems: "center",
-          fontSize: 13, fontWeight: 700,
-          background: "#C4607A", color: "#ffffff",
-          textDecoration: "none", padding: "15px 40px", borderRadius: 4,
-        }}>
-          Boka Terese
-        </Link>
+        <div style={{ borderTop: "1px solid rgba(28,20,16,0.1)", paddingTop: 52 }}>
+          <Link href="/kontakt" style={{
+            fontFamily: "var(--font-sans)",
+            display: "inline-flex", alignItems: "center",
+            fontSize: 13, fontWeight: 700,
+            background: "#C4607A", color: "#ffffff",
+            textDecoration: "none", padding: "14px 40px", borderRadius: 3,
+          }}>
+            Boka Terese
+          </Link>
+        </div>
       </div>
 
       <style>{`
         @media (max-width: 768px) {
-          .tb-citat-grid { grid-template-columns: 1fr !important; }
-          .tb-citat-section { padding: 80px 32px !important; }
+          .tb-citat-section { padding: 80px 28px !important; }
+          .tb-citat-row { grid-template-columns: 1fr !important; gap: 16px !important; }
         }
       `}</style>
     </section>

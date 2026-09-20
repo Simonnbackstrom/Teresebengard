@@ -44,7 +44,7 @@ export default function PaScen() {
             lineHeight: 1.3,
             maxWidth: 640,
           }}>
-            "Med humor, kunskap och ett skarpt öga för det som ofta förbises."
+            &ldquo;Med humor, kunskap och ett skarpt öga för det som ofta förbises.&rdquo;
           </p>
           <p style={{
             fontFamily: "var(--font-sans)",

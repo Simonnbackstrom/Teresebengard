@@ -1,10 +1,12 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   const { namn, organisation, epost, telefon, meddelande } = await req.json();
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
     from: "Bokningsformulär <noreply@bengard.se>",

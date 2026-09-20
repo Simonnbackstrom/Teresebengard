@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -83,7 +84,24 @@ export default function Footer() {
         display: "flex", justifyContent: "space-between", alignItems: "center",
       }} className="tb-footer-bottom">
         <span style={{ fontSize: 12, color: "rgba(253,250,248,0.3)" }}>© {year} Terese Bengard</span>
-        <span style={{ fontSize: 12, color: "rgba(253,250,248,0.3)" }}>Webbplats av Dinmedia</span>
+        <a
+          href="https://dinmedia.co"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-flex", alignItems: "center", gap: 8,
+            fontSize: 12, color: "rgba(253,250,248,0.4)", textDecoration: "none",
+          }}
+        >
+          <span>Webbplats av</span>
+          <Image
+            src="/dinmedia-logo.png"
+            alt="Dinmedia"
+            width={72}
+            height={20}
+            style={{ objectFit: "contain", opacity: 0.75, filter: "brightness(0) invert(1)" }}
+          />
+        </a>
       </div>
 
       <style>{`

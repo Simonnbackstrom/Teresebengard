@@ -33,12 +33,29 @@ export default function KontaktCTA() {
   }
 
   return (
-    <section id="boka" style={{ background: "#FDFAF8" }}>
-      <div style={{ maxWidth: 680, margin: "0 auto", padding: "120px 80px" }} className="tb-form-wrap">
+    <section id="boka" style={{ background: "#FDFAF8", position: "relative", overflow: "hidden" }}>
+      {/* Subtil topografi-linje som backdrop */}
+      <svg
+        aria-hidden
+        viewBox="0 0 1440 320"
+        preserveAspectRatio="none"
+        style={{
+          position: "absolute",
+          bottom: 0, left: 0, right: 0,
+          width: "100%", height: 160,
+          opacity: 0.3,
+          pointerEvents: "none",
+        }}
+      >
+        <path d="M0,220 C180,180 320,260 520,220 C720,180 880,260 1080,220 C1240,190 1360,240 1440,210 L1440,320 L0,320 Z" fill="#F0E5DA" />
+        <path d="M0,260 C220,220 380,280 600,250 C820,220 980,290 1200,260 C1320,244 1400,270 1440,258 L1440,320 L0,320 Z" fill="#E5D6C6" />
+      </svg>
+
+      <div style={{ maxWidth: 680, margin: "0 auto", padding: "120px 80px", position: "relative", zIndex: 1 }} className="tb-form-wrap">
         <p style={{
           fontFamily: "var(--font-sans)",
           fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-          color: "#C4607A", fontWeight: 600, margin: "0 0 16px",
+          color: "#882B8D", fontWeight: 600, margin: "0 0 16px",
         }}>
           Kom i kontakt
         </p>
@@ -90,7 +107,7 @@ export default function KontaktCTA() {
             </div>
             {error && <p style={{ fontSize: 13, color: "#c0392b", margin: 0 }}>{error}</p>}
             <button type="submit" disabled={loading} style={{
-              background: "#C4607A", color: "#ffffff", border: "none",
+              background: "#882B8D", color: "#ffffff", border: "none",
               padding: "16px", fontSize: 14, fontWeight: 600,
               cursor: loading ? "not-allowed" : "pointer",
               opacity: loading ? 0.7 : 1,

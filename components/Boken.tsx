@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Boken() {
   return (
@@ -11,70 +12,46 @@ export default function Boken() {
         maxWidth: 1100,
         margin: "0 auto",
       }}>
-        {/* Bokomslag-placeholder */}
         <div style={{
-          background: "#C4607A",
-          borderRadius: 8,
-          aspectRatio: "2/3",
-          maxWidth: 320,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          padding: 40,
-          textAlign: "center",
-          boxShadow: "0 24px 64px rgba(0,0,0,0.4)",
+          position: "relative",
+          aspectRatio: "425/595",
+          maxWidth: 340,
+          width: "100%",
+          borderRadius: 4,
+          overflow: "hidden",
+          boxShadow: "0 30px 80px -20px rgba(0,0,0,0.65), 0 12px 28px -12px rgba(0,0,0,0.5)",
+          transform: "rotate(-2deg)",
         }}>
-          <p style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: "clamp(1.4rem, 2vw, 2rem)",
-            fontWeight: 700,
-            color: "#ffffff",
-            margin: "0 0 16px",
-            lineHeight: 1.2,
-          }}>
-            Världens mittpunkt
-          </p>
-          <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 12,
-            color: "rgba(255,255,255,0.7)",
-            letterSpacing: "0.1em",
-            margin: "0 0 32px",
-            textTransform: "uppercase",
-          }}>
-            till landsbygdernas försvar
-          </p>
-          <div style={{ width: 40, height: 1, background: "rgba(255,255,255,0.4)" }} />
-          <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 12,
-            color: "rgba(255,255,255,0.5)",
-            margin: "16px 0 0",
-            letterSpacing: "0.05em",
-          }}>
-            Terese Bengard
-          </p>
+          <Image
+            src="/varldens-mittpunkt.png"
+            alt="Bokomslag: Världens Mittpunkt – till landsbygdernas försvar av Terese Bengard"
+            fill
+            sizes="(max-width: 900px) 80vw, 340px"
+            style={{ objectFit: "cover" }}
+          />
         </div>
 
-        {/* Text */}
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-            color: "#C4607A", fontWeight: 600, margin: 0,
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(2rem, 3.2vw, 3rem)",
+            letterSpacing: "0.18em",
+            textTransform: "uppercase",
+            color: "#F39AFA",
+            fontWeight: 700,
+            margin: 0,
+            lineHeight: 1,
           }}>
             Boken
           </p>
           <h2 style={{
-            fontFamily: "var(--font-display)",
+            fontFamily: "var(--font-serif)",
             fontStyle: "italic",
             fontSize: "clamp(2rem, 3vw, 3.5rem)",
-            fontWeight: 700, lineHeight: 1.05,
+            fontWeight: 500, lineHeight: 1.1,
             color: "#ffffff", margin: 0,
           }}>
-            Världens mittpunkt – till landsbygdernas försvar.
+            Världens mittpunkt till landsbygdernas försvar.
           </h2>
           <p style={{
             fontSize: 16, lineHeight: 1.85,
@@ -82,12 +59,6 @@ export default function Boken() {
             margin: 0, maxWidth: 460,
           }}>
             Med humor och värme benar Terese ut sanningar och myter om stad och land. Om centrum och periferi, den urbana normen, platsshaming och känslan av att inte finnas på kartan.
-          </p>
-          <p style={{
-            fontSize: 13, color: "rgba(253,250,248,0.4)",
-            margin: 0,
-          }}>
-            Mondial · 28 mars 2024 · 255 sidor
           </p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 8 }}>
             <a
@@ -98,7 +69,7 @@ export default function Boken() {
               style={{
                 display: "inline-flex", alignItems: "center",
                 fontSize: 13, fontWeight: 700,
-                background: "#C4607A", color: "#ffffff",
+                background: "#882B8D", color: "#ffffff",
                 textDecoration: "none", padding: "14px 32px", borderRadius: 4,
               }}
             >

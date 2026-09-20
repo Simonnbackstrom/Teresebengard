@@ -37,7 +37,7 @@ export default function OmPage() {
             &ldquo;Min drivkraft är att förändra synen på landsbygden och människorna som bor där. Jag vill bidra till bättre förutsättningar för att människor ska kunna leva och verka i hela landet.&rdquo;
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div style={{ width: 32, height: 2, background: "#C4607A", borderRadius: 2, flexShrink: 0 }} />
+            <div style={{ width: 32, height: 2, background: "#882B8D", borderRadius: 2, flexShrink: 0 }} />
             <p style={{ fontSize: 13, color: "rgba(28,20,16,0.5)", margin: 0, fontWeight: 600 }}>
               Terese Bengard
             </p>
@@ -51,7 +51,7 @@ export default function OmPage() {
           <p style={{
             fontFamily: "var(--font-sans)",
             fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-            color: "#C4607A", fontWeight: 600, margin: "0 0 40px",
+            color: "#882B8D", fontWeight: 600, margin: "0 0 40px",
           }}>
             Bakgrund & erfarenhet
           </p>

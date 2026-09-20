@@ -1,21 +1,28 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { EB_Garamond, Cabin, Pinyon_Script } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const cormorant = Cormorant_Garamond({
+const garamond = EB_Garamond({
   subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["400", "600", "700"],
+  variable: "--font-garamond",
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
 
-const inter = Inter({
+const cabin = Cabin({
   subsets: ["latin"],
-  variable: "--font-inter",
-  weight: ["400", "500", "600"],
+  variable: "--font-cabin",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const pinyon = Pinyon_Script({
+  subsets: ["latin"],
+  variable: "--font-pinyon",
+  weight: ["400"],
   display: "swap",
 });
 
@@ -32,7 +39,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="sv" className={`${cormorant.variable} ${inter.variable}`}>
+    <html lang="sv" className={`${garamond.variable} ${cabin.variable} ${pinyon.variable}`}>
       <body>
         <Navbar />
         {children}

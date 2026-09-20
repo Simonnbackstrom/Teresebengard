@@ -29,7 +29,7 @@ export default function BokenPage() {
         <div style={{ maxWidth: 900, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: 80, alignItems: "start" }} className="tb-bok-grid">
           {/* Bokomslag */}
           <div style={{
-            background: "#C4607A",
+            background: "#882B8D",
             borderRadius: 8,
             aspectRatio: "2/3",
             display: "flex",
@@ -72,7 +72,7 @@ export default function BokenPage() {
             <p style={{
               fontFamily: "var(--font-sans)",
               fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-              color: "#C4607A", fontWeight: 600, margin: 0,
+              color: "#882B8D", fontWeight: 600, margin: 0,
             }}>
               Om boken
             </p>
@@ -97,7 +97,7 @@ export default function BokenPage() {
               style={{
                 display: "inline-flex", alignItems: "center", alignSelf: "flex-start",
                 fontSize: 13, fontWeight: 700,
-                background: "#C4607A", color: "#ffffff",
+                background: "#882B8D", color: "#ffffff",
                 textDecoration: "none", padding: "14px 32px", borderRadius: 4,
               }}
             >
@@ -113,7 +113,7 @@ export default function BokenPage() {
           <p style={{
             fontFamily: "var(--font-sans)",
             fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-            color: "#C4607A", fontWeight: 600, margin: "0 0 24px",
+            color: "#882B8D", fontWeight: 600, margin: "0 0 24px",
           }}>
             Boksamtal
           </p>
@@ -136,7 +136,7 @@ export default function BokenPage() {
                 display: "flex", alignItems: "flex-start", gap: 14,
                 lineHeight: 1.6,
               }}>
-                <span style={{ width: 18, height: 1, background: "#C4607A", display: "inline-block", flexShrink: 0, marginTop: 11 }} />
+                <span style={{ width: 18, height: 1, background: "#882B8D", display: "inline-block", flexShrink: 0, marginTop: 11 }} />
                 {a}
               </li>
             ))}

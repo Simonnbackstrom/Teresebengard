@@ -1,14 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-rose: #C4607A;
-  --color-rose-light: #E8A5B2;
+  /* Varumärkesfärger (KOMMUNIKATIONSPLATTFORM PÅ PLATS) */
+  /* Primär (dominant) — djup lila: alla eyebrows, section labels, CTA, ikoner */
+  --color-primary: #882B8D;         /* RGB 136/43/141 */
+  --color-primary-dark: #5A1D5F;    /* hover state */
+  /* Sekundär — rosa/lila: reserverad accent för gradients / subtilt bruk */
+  --color-secondary: #A4507F;       /* RGB 164/80/127 */
+  /* Ljus accent — enbart på mörka bakgrunder (Hero rotating word, dekorativa element) */
+  --color-accent: #F39AFA;          /* RGB 243/154/250 */
+
+  /* Bakåtkompatibla alias */
+  --color-rose: #882B8D;
+  --color-rose-dark: #5A1D5F;
+  --color-rose-light: #F39AFA;
+
   --color-bg: #FDFAF8;
   --color-bg-alt: #F5EEE9;
   --color-ink: #1C1410;
   --color-border: rgba(28, 20, 16, 0.08);
-  --font-display: var(--font-cormorant), Georgia, serif;
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-display: "Gill Sans", "Gill Sans MT", var(--font-cabin), system-ui, sans-serif;
+  --font-serif: var(--font-garamond), "AGaramond", "Adobe Garamond Pro", Garamond, Georgia, serif;
+  --font-script: var(--font-pinyon), "Cochocib Script Latin Pro", cursive;
+  --font-sans: "Gill Sans", "Gill Sans MT", var(--font-cabin), system-ui, -apple-system, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -21,16 +35,16 @@ html {
 body {
   background: #FDFAF8;
   color: #1C1410;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   max-width: 100vw;
 }
 
-/* Terese brand purple */
 :root {
-  --tb-purple: #C4607A;
-  --tb-purple-dark: #5C3E82;
+  --tb-purple: #882B8D;
+  --tb-purple-dark: #5A1D5F;
+  --tb-purple-light: #F39AFA;
 }
 
 @keyframes fadeSlideUp {
@@ -66,7 +80,7 @@ body {
   border-radius: 0;
   appearance: none;
 }
-.tb-input:focus { border-color: #C4607A; }
+.tb-input:focus { border-color: #882B8D; }
 .tb-input::placeholder { color: rgba(28, 20, 16, 0.3); }
 
 .tb-footer-grid { grid-template-columns: 1.8fr 1fr 1fr; }

@@ -31,9 +31,14 @@ export default function OmPreview() {
         {/* Text */}
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-            color: "#C4607A", fontWeight: 600, margin: 0,
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(1.5rem, 2.4vw, 2.2rem)",
+            letterSpacing: "0.22em",
+            textTransform: "uppercase",
+            color: "#882B8D",
+            fontWeight: 700,
+            margin: 0,
+            lineHeight: 1,
           }}>
             Om Terese
           </p>

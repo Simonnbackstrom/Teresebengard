@@ -23,6 +23,7 @@ export default function Navbar() {
     { label: "Föreläsningar", href: "/forelasningar" },
     { label: "Moderator", href: "/moderator" },
     { label: "Boken", href: "/boken" },
+    { label: "Kontakt", href: "/kontakt" },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -33,8 +34,7 @@ export default function Navbar() {
         position: "fixed",
         top: 0, left: 0, right: 0,
         zIndex: 50,
-        background: "rgba(253,250,248,0.96)",
-        backdropFilter: "blur(12px)",
+        background: "#ffffff",
         borderBottom: scrolled ? "1px solid rgba(28,20,16,0.08)" : "1px solid transparent",
         transition: "border-color 0.3s ease",
       }}>
@@ -43,16 +43,26 @@ export default function Navbar() {
           alignItems: "center",
           justifyContent: "space-between",
           padding: "0 60px",
-          height: 68,
+          height: 96,
           maxWidth: 1400,
           margin: "0 auto",
         }} className="tb-nav-inner">
-          <Link href="/" style={{ display: "flex", alignItems: "center" }}>
+          <Link
+            href="/"
+            aria-label="Till startsidan – På Plats, Terese Bengard"
+            className="tb-logo-link"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              cursor: "pointer",
+              transition: "opacity 0.2s ease, transform 0.2s ease",
+            }}
+          >
             <Image
               src="/logo-pa-plats.png"
               alt="På Plats – Terese Bengard"
-              width={110}
-              height={52}
+              width={160}
+              height={76}
               style={{ objectFit: "contain", objectPosition: "left" }}
               priority
             />
@@ -62,9 +72,9 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} style={{
                 fontSize: 14,
-                color: isActive(link.href) ? "#1C1410" : "rgba(28,20,16,0.5)",
+                color: "#000000",
                 textDecoration: "none",
-                fontWeight: isActive(link.href) ? 500 : 400,
+                fontWeight: isActive(link.href) ? 600 : 500,
                 letterSpacing: "0.01em",
                 transition: "color 0.2s",
               }}>
@@ -73,7 +83,7 @@ export default function Navbar() {
             ))}
             <Link href="/kontakt" style={{
               fontSize: 13,
-              background: "#C4607A",
+              background: "#882B8D",
               color: "#ffffff",
               textDecoration: "none",
               padding: "9px 22px",
@@ -107,7 +117,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div style={{
-          position: "fixed", top: 68, left: 0, right: 0, zIndex: 49,
+          position: "fixed", top: 96, left: 0, right: 0, zIndex: 49,
           background: "#FDFAF8",
           borderBottom: "1px solid rgba(28,20,16,0.08)",
           padding: "28px 32px 36px",
@@ -130,7 +140,7 @@ export default function Navbar() {
             display: "inline-flex",
             justifyContent: "center",
             fontSize: 13, fontWeight: 600,
-            background: "#C4607A", color: "#ffffff",
+            background: "#882B8D", color: "#ffffff",
             textDecoration: "none", padding: "14px 24px",
             borderRadius: 3,
           }}>
@@ -140,6 +150,7 @@ export default function Navbar() {
       )}
 
       <style>{`
+        .tb-logo-link:hover { opacity: 0.75; transform: translateY(-1px); }
         @media (max-width: 860px) {
           .tb-desktop-nav { display: none !important; }
           .tb-mobile-btn { display: flex !important; }

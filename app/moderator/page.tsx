@@ -66,7 +66,7 @@ export default function ModeratorPage() {
           <p style={{
             fontFamily: "var(--font-sans)",
             fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-            color: "#C4607A", fontWeight: 600, margin: "0 0 32px",
+            color: "#882B8D", fontWeight: 600, margin: "0 0 32px",
           }}>
             Passar för
           </p>

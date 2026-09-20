@@ -83,7 +83,7 @@ export default function ForelasningarPage() {
                 </h2>
                 {a.badge && (
                   <span style={{
-                    background: "#C4607A", color: "#ffffff",
+                    background: "#882B8D", color: "#ffffff",
                     fontSize: 9, fontWeight: 700, letterSpacing: "0.15em",
                     textTransform: "uppercase", padding: "4px 12px",
                     borderRadius: 50, whiteSpace: "nowrap",

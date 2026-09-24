@@ -19,8 +19,8 @@ export default function OmPage() {
   return (
     <main style={{ background: "#FDFAF8" }}>
       <PageHero
-        title="Föreläsare, författare och röst för landsbygden."
-        subtitle="Terese Bengard arbetar med landsbygdsfrågor, platsperspektiv, kommunikation och kommunpolitik. Hennes drivkraft är att förändra synen på landsbygden och människorna som bor där."
+        title="Föreläsare, författare och röst för landsbygderna."
+        subtitle="Terese Bengard arbetar med landsbygdsfrågor, platsperspektiv, kommunikation och kommunpolitik. Hennes drivkraft är att förändra synen på landsbygderna och människorna som bor där."
       />
 
       {/* Intro-citat */}
@@ -34,7 +34,7 @@ export default function OmPage() {
             color: "#1C1410",
             margin: "0 0 32px",
           }}>
-            &ldquo;Min drivkraft är att förändra synen på landsbygden och människorna som bor där. Jag vill bidra till bättre förutsättningar för att människor ska kunna leva och verka i hela landet.&rdquo;
+            &ldquo;Min drivkraft är att förändra synen på landsbygderna och människorna som bor där. Jag vill bidra till bättre förutsättningar för att människor ska kunna leva och verka i hela landet.&rdquo;
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <div style={{ width: 32, height: 2, background: "#882B8D", borderRadius: 2, flexShrink: 0 }} />

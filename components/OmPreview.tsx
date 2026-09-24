@@ -49,14 +49,14 @@ export default function OmPreview() {
             fontWeight: 700, lineHeight: 1.1,
             color: "#1C1410", margin: 0,
           }}>
-            Kvinna på landsbygden som förändrar samtalet.
+            Kvinna som förändrar samtalet om landsbygderna.
           </h2>
           <p style={{
             fontSize: 16, lineHeight: 1.85,
             color: "rgba(28,20,16,0.6)",
             margin: 0, maxWidth: 440,
           }}>
-            Terese Bengard är föreläsare, författare och utbildad kommunikatör. Hennes drivkraft är att förändra synen på landsbygden och människorna som bor där.
+            Terese Bengard är föreläsare, författare och utbildad kommunikatör. Hennes drivkraft är att förändra synen på landsbygderna och människorna som bor där.
           </p>
           <p style={{
             fontSize: 16, lineHeight: 1.85,

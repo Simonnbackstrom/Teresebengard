@@ -5,24 +5,24 @@ import { useEffect, useRef, useState } from "react";
 
 const reviews = [
   {
-    quote: "Terese Bengard kombinerar djup kunskap om landsbygdsfrågor med en förmåga att nå fram till publiken på ett personligt och engagerande sätt. Föreläsningen gav oss nya perspektiv och satte igång viktiga samtal.",
-    name: "Konferensdeltagare",
-    title: "Kommunkonferens",
+    quote: "Terese Bengard är en föreläsare som utmanar utan att moralisera. Med träffsäkerhet, humor och en tydlig röd tråd genom sina föreläsningar får hon publiken att ifrågasätta invanda normer och tankesätt på ett sätt som både engagerar och väcker eftertanke.",
+    name: "Frida Anundsson",
+    title: "VD, Swedbanks Ägarstiftelse Norrland",
   },
   {
-    quote: "Som moderator skapar Terese en trygghet i rummet som gör att alla vågar delta. Hon lyssnar aktivt, ställer rätt frågor och driver samtalet framåt med både humor och skärpa.",
-    name: "Arrangör",
-    title: "Regional konferens",
+    quote: "Terese Bengard är ett starkt exempel på en kunnig och engagerande person med både driv och struktur. Hon har en djup kompetens inom landsbygdssverige och har under många år varit en uppskattad expert att rådfråga i viktiga frågor.",
+    name: "Ingrid Whitelock",
+    title: "Kommunikationssamordnare, Svenska Landsbygdsnätverket",
   },
   {
-    quote: "Boksamtalet med Terese var en fantastisk upplevelse. Hon väcker tankar och skapar dialog kring frågor som ofta förbises. Världens mittpunkt är ett måste.",
-    name: "Bibliotekarie",
-    title: "Folkbiblioteket",
+    quote: "Terese är otroligt proffsig och strukturerad, samtidigt som hon med charm och glimten i ögat får publiken både avslappnad och engagerad. Hennes breda kompetens i landsbygdsfrågor gör att hon leder panelsamtal på ett konstruktivt sätt.",
+    name: "Jennie Bergvall Kalén & Linn Alexandersson",
+    title: "Landsbygdsstrateger, Umeå kommun",
   },
   {
-    quote: "Terese utmanar föreställningar på ett respektfullt men bestämt sätt. Hennes föreläsning om den urbana normen var ögonöppnande för många i vår organisation.",
-    name: "HR-chef",
-    title: "Region Norrland",
+    quote: "Terese har en unik kombination av närvaro, engagemang och en enorm kunskap kring landsbygdsfrågor. Hon är en storyteller med talets gåva och får alla att känna sig inkluderade och inspirerade.",
+    name: "Jennifer Erlandsson",
+    title: "Landsbygdsdröm / Bonde söker fru",
   },
 ];
 

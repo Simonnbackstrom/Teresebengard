@@ -45,9 +45,8 @@ export default function Footer() {
           <nav style={{ display: "flex", flexDirection: "column", gap: 14 }}>
             {[
               { label: "Om mig", href: "/om" },
-              { label: "Föreläsningar", href: "/forelasningar" },
-              { label: "Moderator", href: "/moderator" },
-              { label: "Boken", href: "/boken" },
+              { label: "Föreläsningar & moderator", href: "/forelasningar" },
+              { label: "Rådgivning", href: "/radgivning" },
               { label: "Kontakt", href: "/kontakt" },
             ].map((link) => (
               <Link key={link.label} href={link.href} style={{

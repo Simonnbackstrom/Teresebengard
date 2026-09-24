@@ -75,7 +75,7 @@ export default function Boken() {
             >
               Köp boken
             </a>
-            <Link href="/boken" style={{
+            <Link href="/forelasningar#boksamtal" style={{
               display: "inline-flex", alignItems: "center",
               fontSize: 13, fontWeight: 500,
               color: "rgba(253,250,248,0.6)",

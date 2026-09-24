@@ -6,7 +6,7 @@ const items = [
   {
     label: "Föreläsare",
     body: "Skräddarsydda föreläsningar om landsbygd, urban norm, beredskap och platsutveckling.",
-    href: "/forelasningar",
+    href: "/forelasningar#forelasningar",
     // Ax / vetestrå — växande kunskap ur jorden
     icon: (
       <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
@@ -25,7 +25,7 @@ const items = [
   {
     label: "Moderator",
     body: "Leder samtal med kunskap, engagemang och humor — skapar trygghet i rummet.",
-    href: "/moderator",
+    href: "/forelasningar#moderator",
     // Två samtalande blad — dialog i naturen
     icon: (
       <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
@@ -39,19 +39,18 @@ const items = [
     ),
   },
   {
-    label: "Boksamtal",
-    body: "Inspirerande boksamtal kring Världens mittpunkt — landsbygdernas försvar.",
-    href: "/boken",
-    // Öppen bok med en liten kvist
+    label: "Rådgivning",
+    body: "Processledning, strategi och landsbygdssäkring — längre uppdrag där På Plats leder arbetet framåt.",
+    href: "/radgivning",
+    // Kompass — riktning och navigering
     icon: (
       <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-        {/* bok — öppna uppslag */}
-        <path d="M4 22 L16 20 L28 22 L28 10 L16 8 L4 10 Z" />
-        <line x1="16" y1="8" x2="16" y2="20" />
-        {/* liten kvist ovanpå */}
-        <path d="M16 8 C16 5 17 3 19 2" />
-        <path d="M17 4 C18.5 3.5 20 4 20.5 5.5" strokeOpacity="0.7" />
-        <path d="M16.5 6 C15.5 5.5 14.5 6 14 7" strokeOpacity="0.7" />
+        <circle cx="16" cy="16" r="12" />
+        <polygon points="16,8 19,16 16,24 13,16" fill="currentColor" fillOpacity="0.15" />
+        <line x1="16" y1="4" x2="16" y2="6" />
+        <line x1="16" y1="26" x2="16" y2="28" />
+        <line x1="4" y1="16" x2="6" y2="16" />
+        <line x1="26" y1="16" x2="28" y2="16" />
       </svg>
     ),
   },

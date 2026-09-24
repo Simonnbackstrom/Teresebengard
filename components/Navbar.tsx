@@ -20,9 +20,8 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Om mig", href: "/om" },
-    { label: "Föreläsningar", href: "/forelasningar" },
-    { label: "Moderator", href: "/moderator" },
-    { label: "Boken", href: "/boken" },
+    { label: "Föreläsningar & moderator", href: "/forelasningar" },
+    { label: "Rådgivning", href: "/radgivning" },
     { label: "Kontakt", href: "/kontakt" },
   ];
 
@@ -68,7 +67,7 @@ export default function Navbar() {
             />
           </Link>
 
-          <nav style={{ display: "flex", alignItems: "center", gap: 40 }} className="tb-desktop-nav">
+          <nav style={{ display: "flex", alignItems: "center", gap: 36 }} className="tb-desktop-nav">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} style={{
                 fontSize: 14,

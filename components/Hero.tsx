@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const words = ["landsbygden.", "platsen.", "bygden.", "livet på landet."];
+const words = ["landsbygderna.", "platsen.", "bygden.", "livet på landet."];
 
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0);
@@ -106,7 +106,7 @@ export default function Hero() {
             fontWeight: 500,
             textShadow: "0 2px 16px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.45)",
           }}>
-            Boka Terese som föreläsare, moderator eller samtalsledare.
+            Boka Terese som föreläsare, moderator eller processledare.
           </p>
 
           <div style={{

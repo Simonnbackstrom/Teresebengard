@@ -63,7 +63,7 @@ export default function OmPreview() {
             color: "rgba(28,20,16,0.6)",
             margin: 0, maxWidth: 440,
           }}>
-            Hon har varit ordförande i kommunstyrelsen, är ledamot i Småföretagarnas Riksförbund och är mångårig krönikör. Hennes uppdrag kommer från kommuner, regioner och konferensarrangörer i hela landet.
+            Hon har varit ordförande i kommunstyrelsen, är verksamhetschef för riksorganisationen Hela Sverige ska leva, är ledamot i Småföretagarnas Riksförbund och är mångårig krönikör. Hennes uppdrag kommer från offentliga organisationer, föreningar, nätverk och finansiärer i hela landet.
           </p>
           <Link href="/om" style={{
             fontSize: 14, fontWeight: 600,

@@ -33,13 +33,10 @@ export default function Hero() {
           priority
           style={{
             objectFit: "cover",
-            objectPosition: "center center",
-            transform: "scale(1.15) translateY(8%)",
-            transformOrigin: "center center",
-            transition: "transform 1.4s ease",
+            objectPosition: "center 80%",
           }}
           sizes="100vw"
-          quality={95}
+          quality={90}
         />
       </div>
 
@@ -150,8 +147,8 @@ export default function Hero() {
       <style>{`
         .tb-hero-photo img { animation: tb-hero-zoom 14s ease-out forwards; }
         @keyframes tb-hero-zoom {
-          from { transform: scale(1.22) translateY(8%); }
-          to   { transform: scale(1.15) translateY(8%); }
+          from { transform: scale(1.04); }
+          to   { transform: scale(1.0); }
         }
         @keyframes tb-word-in {
           from { opacity: 0; transform: translateY(14px); filter: blur(4px); }
@@ -176,7 +173,7 @@ export default function Hero() {
           .tb-hero-photo img {
             animation: none !important;
             transform: none !important;
-            object-position: 30% center !important;
+            object-position: 35% 35% !important;
           }
         }
       `}</style>

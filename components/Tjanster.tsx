@@ -58,7 +58,7 @@ const items = [
 
 export default function Tjanster() {
   return (
-    <section style={{ background: "#F5EEE9", padding: "120px 80px", position: "relative", overflow: "hidden" }} className="tb-tjanster-section">
+    <section style={{ background: "#F3F4F6", padding: "120px 80px", position: "relative", overflow: "hidden" }} className="tb-tjanster-section">
       {/* Subtil topografi-linje som backdrop */}
       <svg
         aria-hidden
@@ -72,8 +72,8 @@ export default function Tjanster() {
           pointerEvents: "none",
         }}
       >
-        <path d="M0,220 C180,180 320,260 520,220 C720,180 880,260 1080,220 C1240,190 1360,240 1440,210 L1440,320 L0,320 Z" fill="#E8DDD4" />
-        <path d="M0,260 C220,220 380,280 600,250 C820,220 980,290 1200,260 C1320,244 1400,270 1440,258 L1440,320 L0,320 Z" fill="#DFD1C4" />
+        <path d="M0,220 C180,180 320,260 520,220 C720,180 880,260 1080,220 C1240,190 1360,240 1440,210 L1440,320 L0,320 Z" fill="#E5E7EB" />
+        <path d="M0,260 C220,220 380,280 600,250 C820,220 980,290 1200,260 C1320,244 1400,270 1440,258 L1440,320 L0,320 Z" fill="#D1D5DB" />
       </svg>
 
       <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative", zIndex: 1 }}>

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import KontaktCTA from "@/components/KontaktCTA";
 
 export const metadata: Metadata = {
-  title: "Föreläsningar & moderator – Terese Bengard",
+  title: "Föreläsare och moderator – Terese Bengard",
   description: "Boka Terese Bengard som föreläsare eller moderator. Föreläsningar om landsbygdsfrågor, urban norm och beredskap – samt moderatorskap och boksamtal.",
 };
 
@@ -63,7 +64,7 @@ export default function ForelasningarPage() {
   return (
     <main style={{ background: "#FDFAF8" }}>
       <PageHero
-        title="Föreläsningar och moderatorskap med platsperspektiv."
+        title="Föreläsare och moderator med platsperspektiv."
         subtitle="Terese skräddarsyr föreläsningar och leder samtal med kunskap, engagemang och humor. Utmanar etablerade sanningar och slår hål på myter."
       />
 
@@ -75,7 +76,7 @@ export default function ForelasningarPage() {
             fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
             color: "#882B8D", fontWeight: 600, margin: "0 0 24px",
           }}>
-            Föreläsningar
+            Föreläsare
           </p>
           <p style={{
             fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)",
@@ -94,7 +95,7 @@ export default function ForelasningarPage() {
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
           {amnen.map((a, i) => (
             <div key={i} style={{
-              background: "#F5EEE9",
+              background: "#F3F4F6",
               borderRadius: 8,
               padding: "48px 56px",
               display: "flex",
@@ -185,6 +186,68 @@ export default function ForelasningarPage() {
         </div>
       </section>
 
+      {/* Moderator-bilder */}
+      <section style={{ padding: "0 80px 40px", background: "#FDFAF8" }} className="tb-f-mod-bilder">
+        <div className="tb-f-mod-bilder-grid" style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 20,
+          maxWidth: 1100,
+          margin: "0 auto",
+        }}>
+          <div style={{
+            borderRadius: 4,
+            aspectRatio: "16/10",
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            <Image
+              src="/terese-moderator-panel.jpg"
+              alt="Terese Bengard modererar panelsamtal"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{
+            borderRadius: 4,
+            aspectRatio: "16/10",
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            <Image
+              src="/terese-moderator-grupp.jpg"
+              alt="Terese Bengard med paneldeltagare"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Citat */}
+      <section style={{ padding: "120px 80px", background: "#FDFAF8" }} className="tb-f-citat">
+        <div style={{ maxWidth: 860, margin: "0 auto" }}>
+          <p style={{
+            fontFamily: "var(--font-display)",
+            fontStyle: "italic",
+            fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
+            lineHeight: 1.6,
+            color: "#1C1410",
+            margin: "0 0 32px",
+          }}>
+            &ldquo;Terese Bengard är ett starkt exempel på en kunnig och engagerande person med både driv och struktur. Hon har en djup kompetens inom landsbygdssverige och har under många år varit en uppskattad expert att rådfråga i viktiga frågor.&rdquo;
+          </p>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <div style={{ width: 32, height: 2, background: "#882B8D", borderRadius: 2, flexShrink: 0 }} />
+            <p style={{ fontSize: 13, color: "rgba(28,20,16,0.5)", margin: 0, fontWeight: 600 }}>
+              Ingrid Whitelock, Svenska Landsbygdsnätverket
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Moderator — passar för */}
       <section style={{ background: "#2A1F1A", padding: "120px 80px" }} className="tb-format-section">
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
@@ -229,7 +292,7 @@ export default function ForelasningarPage() {
             fontWeight: 700, lineHeight: 1.1, color: "#1C1410",
             margin: "0 0 24px",
           }}>
-            Inspiration och dialog kring bok och ämne.
+            Inspiration och dialog kring boken ”Världens mittpunkt”.
           </h2>
           <p style={{ fontSize: 16, lineHeight: 1.85, color: "rgba(28,20,16,0.65)", margin: "0 0 40px", maxWidth: 720 }}>
             Terese erbjuder boksamtal med inspiration och dialog – för bibliotek, studiecirklar, konferenser och föreningar. Samtalen berör bland annat:
@@ -252,12 +315,17 @@ export default function ForelasningarPage() {
       <KontaktCTA />
 
       <style>{`
+        @media (max-width: 900px) {
+          .tb-f-mod-bilder-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+        }
         @media (max-width: 768px) {
           .tb-f-intro { padding: 80px 32px 0 !important; }
           .tb-f-amnen { padding: 40px 32px 64px !important; }
           .tb-f-amnen > div > div { padding: 36px 28px !important; }
           .tb-mod-section { padding: 0 32px 24px !important; }
           .tb-egenskap-row { grid-template-columns: 1fr !important; gap: 12px !important; }
+          .tb-f-mod-bilder { padding: 0 32px 24px !important; }
+          .tb-f-citat { padding: 80px 32px !important; }
           .tb-format-section { padding: 80px 32px !important; }
           .tb-boksamtal-section { padding: 80px 32px !important; }
         }

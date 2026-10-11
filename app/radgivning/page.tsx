@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import KontaktCTA from "@/components/KontaktCTA";
 
@@ -26,35 +27,57 @@ export default function RadgivningPage() {
 
       {/* Processledning */}
       <section style={{ padding: "120px 80px 80px" }} className="tb-r-intro">
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <p style={{
-            fontFamily: "var(--font-sans)",
-            fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
-            color: "#882B8D", fontWeight: 600, margin: "0 0 24px",
+        <div className="tb-r-intro-grid" style={{
+          display: "grid",
+          gridTemplateColumns: "1.1fr 1fr",
+          gap: 72,
+          alignItems: "center",
+          maxWidth: 1100,
+          margin: "0 auto",
+        }}>
+          <div>
+            <p style={{
+              fontFamily: "var(--font-sans)",
+              fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
+              color: "#882B8D", fontWeight: 600, margin: "0 0 24px",
+            }}>
+              Processledning & utvecklingsarbete
+            </p>
+            <h2 style={{
+              fontFamily: "var(--font-display)",
+              fontStyle: "italic",
+              fontSize: "clamp(1.6rem, 2.6vw, 2.4rem)",
+              fontWeight: 700, lineHeight: 1.2,
+              color: "#1C1410", margin: "0 0 28px",
+              letterSpacing: "-0.01em",
+            }}>
+              Längre processer där På Plats leder arbetet framåt över tid.
+            </h2>
+            <p style={{
+              fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
+              lineHeight: 1.75,
+              color: "rgba(28,20,16,0.7)",
+              margin: 0,
+            }}>
+              Kan omfatta workshops, dialogprocesser, strategiarbete eller utveckling av
+              större satsningar. Terese tar rollen som processledare — håller ihop
+              arbetet, ställer de svåra frågorna och ser till att alla röster kommer in.
+            </p>
+          </div>
+          <div style={{
+            borderRadius: 4,
+            aspectRatio: "2/3",
+            position: "relative",
+            overflow: "hidden",
           }}>
-            Processledning & utvecklingsarbete
-          </p>
-          <h2 style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: "clamp(1.6rem, 2.6vw, 2.4rem)",
-            fontWeight: 700, lineHeight: 1.2,
-            color: "#1C1410", margin: "0 0 28px",
-            letterSpacing: "-0.01em",
-          }}>
-            Längre processer där På Plats leder arbetet framåt över tid.
-          </h2>
-          <p style={{
-            fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
-            lineHeight: 1.75,
-            color: "rgba(28,20,16,0.7)",
-            margin: 0,
-            maxWidth: 720,
-          }}>
-            Kan omfatta workshops, dialogprocesser, strategiarbete eller utveckling av
-            större satsningar. Terese tar rollen som processledare — håller ihop
-            arbetet, ställer de svåra frågorna och ser till att alla röster kommer in.
-          </p>
+            <Image
+              src="/terese-sy.jpg"
+              alt="Hand med nål och tråd vid sjön"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              sizes="(max-width: 900px) 100vw, 45vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -109,6 +132,9 @@ export default function RadgivningPage() {
       <KontaktCTA />
 
       <style>{`
+        @media (max-width: 900px) {
+          .tb-r-intro-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+        }
         @media (max-width: 768px) {
           .tb-r-intro { padding: 80px 32px 48px !important; }
           .tb-r-omraden { padding: 24px 32px 80px !important; }

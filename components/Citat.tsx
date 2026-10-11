@@ -236,6 +236,13 @@ export default function Citat() {
                 }}>
                   &ldquo;
                 </span>
+                <div aria-label="5 av 5 stjärnor" style={{ display: "flex", gap: 4 }}>
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <svg key={s} width="18" height="18" viewBox="0 0 24 24" fill="#F5B301" aria-hidden>
+                      <path d="M12 2.5l2.955 6.09 6.545.942-4.75 4.63 1.122 6.538L12 17.77l-5.872 3.19 1.122-6.538-4.75-4.63 6.545-.942L12 2.5z" />
+                    </svg>
+                  ))}
+                </div>
                 <p style={{
                   fontFamily: "var(--font-serif)",
                   fontStyle: "italic",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import PageHero from "@/components/PageHero";
 import KontaktCTA from "@/components/KontaktCTA";
 
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 
 const meriter = [
   { title: "Ordförande i kommunstyrelsen", desc: "Mångårig erfarenhet av politiskt arbete och kommunal ledning." },
+  { title: "Verksamhetschef för riksorganisationen Hela Sverige ska leva", desc: "Ledande position i en nationell organisation med inriktning på landsbygdsfrågor." },
   { title: "Ledamot i Småföretagarnas Riksförbund", desc: "Engagemang för företagande och näringsliv utanför storstäderna." },
   { title: "Mångårig krönikör", desc: "Skriver och kommunicerar om landsbygd, plats och samhällsfrågor." },
   { title: "Styrelsearbete", desc: "Bred erfarenhet av styrelseuppdrag i organisationer och föreningar." },
@@ -23,24 +25,47 @@ export default function OmPage() {
         subtitle="Terese Bengard arbetar med landsbygdsfrågor, platsperspektiv, kommunikation och kommunpolitik. Hennes drivkraft är att förändra synen på landsbygderna och människorna som bor där."
       />
 
-      {/* Intro-citat */}
+      {/* Intro-citat med porträtt */}
       <section style={{ padding: "120px 80px", background: "#FDFAF8" }} className="tb-om-intro">
-        <div style={{ maxWidth: 860, margin: "0 auto" }}>
-          <p style={{
-            fontFamily: "var(--font-display)",
-            fontStyle: "italic",
-            fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
-            lineHeight: 1.6,
-            color: "#1C1410",
-            margin: "0 0 32px",
+        <div className="tb-om-intro-grid" style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 80,
+          alignItems: "center",
+          maxWidth: 1100,
+          margin: "0 auto",
+        }}>
+          <div style={{
+            borderRadius: 4,
+            aspectRatio: "3/4",
+            position: "relative",
+            overflow: "hidden",
           }}>
-            &ldquo;Min drivkraft är att förändra synen på landsbygderna och människorna som bor där. Jag vill bidra till bättre förutsättningar för att människor ska kunna leva och verka i hela landet.&rdquo;
-          </p>
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div style={{ width: 32, height: 2, background: "#882B8D", borderRadius: 2, flexShrink: 0 }} />
-            <p style={{ fontSize: 13, color: "rgba(28,20,16,0.5)", margin: 0, fontWeight: 600 }}>
-              Terese Bengard
+            <Image
+              src="/terese-staende-hd.jpg"
+              alt="Terese Bengard vid sjön"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
+          <div>
+            <p style={{
+              fontFamily: "var(--font-display)",
+              fontStyle: "italic",
+              fontSize: "clamp(1.4rem, 2.2vw, 2rem)",
+              lineHeight: 1.6,
+              color: "#1C1410",
+              margin: "0 0 32px",
+            }}>
+              &ldquo;Min drivkraft är att förändra synen på landsbygderna och människorna som bor där. Jag vill bidra till bättre förutsättningar för att människor ska kunna leva och verka i hela landet.&rdquo;
             </p>
+            <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+              <div style={{ width: 32, height: 2, background: "#882B8D", borderRadius: 2, flexShrink: 0 }} />
+              <p style={{ fontSize: 13, color: "rgba(28,20,16,0.5)", margin: 0, fontWeight: 600 }}>
+                Terese Bengard
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -88,6 +113,9 @@ export default function OmPage() {
       <KontaktCTA />
 
       <style>{`
+        @media (max-width: 900px) {
+          .tb-om-intro-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+        }
         @media (max-width: 768px) {
           .tb-om-intro { padding: 80px 32px !important; }
           .tb-om-bg { padding: 0 32px 80px !important; }

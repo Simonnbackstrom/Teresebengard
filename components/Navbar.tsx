@@ -20,7 +20,7 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Om mig", href: "/om" },
-    { label: "Föreläsningar & moderator", href: "/forelasningar" },
+    { label: "Föreläsare och moderator", href: "/forelasningar" },
     { label: "Rådgivning", href: "/radgivning" },
     { label: "Kontakt", href: "/kontakt" },
   ];
@@ -95,9 +95,23 @@ export default function Navbar() {
             </Link>
           </nav>
 
+          <div className="tb-mobile-actions" style={{ display: "none", alignItems: "center", gap: 10 }}>
+            <Link href="/kontakt" style={{
+              fontSize: 12,
+              background: "#882B8D",
+              color: "#ffffff",
+              textDecoration: "none",
+              padding: "8px 16px",
+              fontWeight: 600,
+              borderRadius: 3,
+              letterSpacing: "0.02em",
+              whiteSpace: "nowrap",
+            }}>
+              Boka mig
+            </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            style={{ display: "none", background: "none", border: "none", cursor: "pointer", padding: 8, color: "#1C1410" }}
+            style={{ background: "none", border: "none", cursor: "pointer", padding: 8, color: "#1C1410" }}
             className="tb-mobile-btn"
             aria-label="Meny"
           >
@@ -111,6 +125,7 @@ export default function Navbar() {
               </svg>
             )}
           </button>
+          </div>
         </div>
       </header>
 
@@ -152,7 +167,7 @@ export default function Navbar() {
         .tb-logo-link:hover { opacity: 0.75; transform: translateY(-1px); }
         @media (max-width: 860px) {
           .tb-desktop-nav { display: none !important; }
-          .tb-mobile-btn { display: flex !important; }
+          .tb-mobile-actions { display: flex !important; }
           .tb-nav-inner { padding: 0 24px !important; }
         }
       `}</style>

@@ -24,7 +24,7 @@ const items = [
   },
   {
     label: "Moderator",
-    body: "Leder samtal med kunskap, engagemang och humor — skapar trygghet i rummet.",
+    body: "Leder samtal med kunskap, engagemang och humor. Skapar trygghet i rummet.",
     href: "/forelasningar#moderator",
     // Två samtalande blad — dialog i naturen
     icon: (
@@ -40,7 +40,7 @@ const items = [
   },
   {
     label: "Rådgivning",
-    body: "Processledning, strategi och landsbygdssäkring — längre uppdrag där På Plats leder arbetet framåt.",
+    body: "Processledning, strategi och landsbygdssäkring. Längre uppdrag där På Plats leder arbetet framåt.",
     href: "/radgivning",
     // Kompass — riktning och navigering
     icon: (

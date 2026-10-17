@@ -31,12 +31,12 @@ export default function Hero() {
           alt="Terese Bengard"
           fill
           priority
+          unoptimized
           style={{
             objectFit: "cover",
-            objectPosition: "center 80%",
+            objectPosition: "75% 80%",
           }}
           sizes="100vw"
-          quality={90}
         />
       </div>
 
@@ -173,7 +173,7 @@ export default function Hero() {
           .tb-hero-photo img {
             animation: none !important;
             transform: none !important;
-            object-position: 35% 35% !important;
+            object-position: 18% 25% !important;
           }
         }
       `}</style>

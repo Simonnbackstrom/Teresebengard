@@ -14,7 +14,7 @@ const omraden = [
   { title: "Remisser", body: "Analys och skarpa remissvar i frågor som rör landsbygdspolitik, plats och kommunikation." },
   { title: "Landsbygdspolitik", body: "Strategisk rådgivning i politiska processer, opinionsarbete och långsiktig påverkan för hela landet." },
   { title: "Urban norm", body: "Verktyg för att identifiera och utmana den urbana normen i organisationer, myndigheter och kommunikation." },
-  { title: "Kommunikationsarbete", body: "Rådgivning kring budskap, målgrupper och strategier — särskilt när platsen och landsbygderna är i fokus." },
+  { title: "Kommunikationsarbete", body: "Rådgivning kring budskap, målgrupper och strategier, särskilt när platsen och landsbygderna är i fokus." },
 ];
 
 export default function RadgivningPage() {
@@ -60,7 +60,7 @@ export default function RadgivningPage() {
               margin: 0,
             }}>
               Kan omfatta workshops, dialogprocesser, strategiarbete eller utveckling av
-              större satsningar. Terese tar rollen som processledare — håller ihop
+              större satsningar. Terese tar rollen som processledare, håller ihop
               arbetet, ställer de svåra frågorna och ser till att alla röster kommer in.
             </p>
           </div>

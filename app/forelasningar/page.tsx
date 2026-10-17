@@ -157,7 +157,7 @@ export default function ForelasningarPage() {
             color: "rgba(28,20,16,0.65)",
             margin: 0, maxWidth: 720,
           }}>
-            Terese skapar trygghet i rummet och driver samtal framåt med precision och personlighet — kunnig, förberedd och lyhörd.
+            Terese skapar trygghet i rummet och driver samtal framåt med precision och personlighet. Kunnig, förberedd och lyhörd.
           </p>
           {egenskaper.map((e, i) => (
             <div key={i} style={{

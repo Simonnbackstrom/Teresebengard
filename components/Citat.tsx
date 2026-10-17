@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const reviews = [
@@ -8,25 +9,29 @@ const reviews = [
     quote: "Terese Bengard är en föreläsare som utmanar utan att moralisera. Med träffsäkerhet, humor och en tydlig röd tråd genom sina föreläsningar får hon publiken att ifrågasätta invanda normer och tankesätt på ett sätt som både engagerar och väcker eftertanke.",
     name: "Frida Anundsson",
     title: "VD, Swedbanks Ägarstiftelse Norrland",
+    image: "/review-frida.jpg",
   },
   {
     quote: "Terese Bengard är ett starkt exempel på en kunnig och engagerande person med både driv och struktur. Hon har en djup kompetens inom landsbygdssverige och har under många år varit en uppskattad expert att rådfråga i viktiga frågor.",
     name: "Ingrid Whitelock",
     title: "Kommunikationssamordnare, Svenska Landsbygdsnätverket",
+    image: "/review-ingrid.jpg",
   },
   {
     quote: "Terese är otroligt proffsig och strukturerad, samtidigt som hon med charm och glimten i ögat får publiken både avslappnad och engagerad. Hennes breda kompetens i landsbygdsfrågor gör att hon leder panelsamtal på ett konstruktivt sätt.",
     name: "Jennie Bergvall Kalén & Linn Alexandersson",
     title: "Landsbygdsstrateger, Umeå kommun",
+    image: "/review-linn-jennie.jpg",
   },
   {
     quote: "Terese har en unik kombination av närvaro, engagemang och en enorm kunskap kring landsbygdsfrågor. Hon är en storyteller med talets gåva och får alla att känna sig inkluderade och inspirerade.",
     name: "Jennifer Erlandsson",
     title: "Landsbygdsdröm / Bonde söker fru",
+    image: "/review-jennifer.jpg",
   },
 ];
 
-const AUTOPLAY_MS = 6000;
+const AUTOPLAY_MS = 3800;
 const N = reviews.length;
 // Render three sets: [prev-clones | main | next-clones]. Start on main set.
 const items = [...reviews, ...reviews, ...reviews];
@@ -254,23 +259,49 @@ export default function Citat() {
                 }}>
                   {r.quote}
                 </p>
-                <div style={{ borderTop: "1px solid rgba(28,20,16,0.08)", paddingTop: 18 }}>
-                  <p style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: 13, fontWeight: 700,
-                    color: "#1C1410", margin: 0,
-                    letterSpacing: "0.05em",
-                    textTransform: "uppercase",
+                <div style={{
+                  borderTop: "1px solid rgba(28,20,16,0.08)",
+                  paddingTop: 18,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                }}>
+                  <div style={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: 999,
+                    overflow: "hidden",
+                    position: "relative",
+                    flexShrink: 0,
+                    background: "#F2E7F3",
+                    boxShadow: "0 2px 10px -4px rgba(28,20,16,0.18)",
                   }}>
-                    {r.name}
-                  </p>
-                  <p style={{
-                    fontFamily: "var(--font-display)",
-                    fontSize: 13,
-                    color: "rgba(28,20,16,0.55)", margin: "4px 0 0",
-                  }}>
-                    {r.title}
-                  </p>
+                    <Image
+                      src={r.image}
+                      alt={r.name}
+                      fill
+                      sizes="48px"
+                      style={{ objectFit: "cover" }}
+                    />
+                  </div>
+                  <div style={{ minWidth: 0 }}>
+                    <p style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: 13, fontWeight: 700,
+                      color: "#1C1410", margin: 0,
+                      letterSpacing: "0.05em",
+                      textTransform: "uppercase",
+                    }}>
+                      {r.name}
+                    </p>
+                    <p style={{
+                      fontFamily: "var(--font-display)",
+                      fontSize: 13,
+                      color: "rgba(28,20,16,0.55)", margin: "4px 0 0",
+                    }}>
+                      {r.title}
+                    </p>
+                  </div>
                 </div>
               </article>
             );

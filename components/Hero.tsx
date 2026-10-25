@@ -23,18 +23,19 @@ export default function Hero() {
       display: "flex",
       alignItems: "center",
       overflow: "hidden",
-      background: "#1a1310",
+      background: "#1A0F2E",
     }}>
       <div className="tb-hero-photo" style={{ position: "absolute", inset: 0 }}>
         <Image
-          src="/terese-hero.jpg"
+          src="/terese-hero-sjo-wide.jpg"
           alt="Terese Bengard"
           fill
           priority
           unoptimized
           style={{
             objectFit: "cover",
-            objectPosition: "75% 80%",
+            objectPosition: "center center",
+            filter: "brightness(1.08)",
           }}
           sizes="100vw"
         />
@@ -43,7 +44,7 @@ export default function Hero() {
       <div className="tb-hero-gradient" style={{
         position: "absolute",
         inset: 0,
-        background: "radial-gradient(ellipse at 65% 55%, rgba(20,14,12,0.55) 0%, rgba(20,14,12,0.35) 40%, rgba(20,14,12,0.55) 100%)",
+        background: "radial-gradient(ellipse at 50% 50%, rgba(26,15,46,0.55) 0%, rgba(26,15,46,0.35) 40%, rgba(26,15,46,0.55) 100%)",
       }} />
 
       <div style={{
@@ -160,20 +161,14 @@ export default function Hero() {
         .tb-hero-link:hover { color: #ffffff; border-bottom-color: #ffffff; }
         .tb-hero-link:hover .tb-hero-arrow { transform: translateX(4px); }
         @media (max-width: 900px) {
-          .tb-hero-gradient {
-            background: linear-gradient(to top, rgba(20,14,12,0.78) 0%, rgba(20,14,12,0.35) 45%, transparent 75%) !important;
-          }
           .tb-hero-content { padding: 0 28px !important; }
           .tb-hero-inner { max-width: 100% !important; }
         }
         @media (max-width: 768px) {
-          .tb-hero-photo {
-            top: 90px !important;
-          }
           .tb-hero-photo img {
             animation: none !important;
             transform: none !important;
-            object-position: 18% 25% !important;
+            object-position: 30% center !important;
           }
         }
       `}</style>

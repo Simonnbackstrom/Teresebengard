@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Boken() {
   return (
-    <section style={{ background: "#2A1F1A", padding: "120px 80px" }} className="tb-boken-section">
+    <section style={{ background: "#3B1142", padding: "120px 80px" }} className="tb-boken-section">
       <div className="tb-boken-grid" style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",

@@ -10,7 +10,7 @@ export default function MellanRum() {
         width: "100%",
         height: "clamp(420px, 70vh, 640px)",
         overflow: "hidden",
-        background: "#1a1310",
+        background: "#1A0F2E",
       }}
     >
       <div style={{ position: "absolute", inset: 0 }}>
@@ -33,7 +33,7 @@ export default function MellanRum() {
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(to right, rgba(20,14,12,0.55) 0%, rgba(20,14,12,0.25) 45%, rgba(20,14,12,0) 75%)",
+            "linear-gradient(to right, rgba(26,15,46,0.55) 0%, rgba(26,15,46,0.25) 45%, rgba(26,15,46,0) 75%)",
         }}
       />
 

@@ -25,7 +25,7 @@ export default function Page() {
         <OmPreview />
       </ScrollReveal>
       <ScrollReveal>
-        <KontaktCTA />
+        <KontaktCTA image={{ src: "/terese-leende.jpg", alt: "Terese Bengard porträtt" }} />
       </ScrollReveal>
     </main>
   );

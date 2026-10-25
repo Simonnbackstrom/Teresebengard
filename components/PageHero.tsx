@@ -4,7 +4,7 @@ interface PageHeroProps {
   bg?: string;
 }
 
-export default function PageHero({ title, subtitle, bg = "#F5EEE9" }: PageHeroProps) {
+export default function PageHero({ title, subtitle, bg = "#F2E7F3" }: PageHeroProps) {
   return (
     <section style={{
       background: bg,

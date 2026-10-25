@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import KontaktCTA from "@/components/KontaktCTA";
+import BokaCTA from "@/components/BokaCTA";
 
 export const metadata: Metadata = {
   title: "Om Terese – Terese Bengard",
@@ -110,7 +110,7 @@ export default function OmPage() {
         </div>
       </section>
 
-      <KontaktCTA />
+      <BokaCTA />
 
       <style>{`
         @media (max-width: 900px) {

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PaScen() {
   return (
-    <section style={{ background: "#1C1410", overflow: "hidden" }} className="tb-pascen">
+    <section style={{ background: "#1A0F2E", overflow: "hidden" }} className="tb-pascen">
       {/* Fullbredd foto */}
       <div style={{ position: "relative", height: "70vh", minHeight: 480 }}>
         <Image
@@ -15,7 +15,7 @@ export default function PaScen() {
         <div style={{
           position: "absolute",
           inset: 0,
-          background: "linear-gradient(to top, rgba(28,20,16,0.85) 0%, rgba(28,20,16,0.2) 60%, transparent 100%)",
+          background: "linear-gradient(to top, rgba(26,15,46,0.85) 0%, rgba(26,15,46,0.2) 60%, transparent 100%)",
         }} />
         <div style={{
           position: "absolute",

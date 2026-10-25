@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import KontaktCTA from "@/components/KontaktCTA";
+import BokaCTA from "@/components/BokaCTA";
 
 export const metadata: Metadata = {
   title: "Föreläsare och moderator – Terese Bengard",
@@ -87,6 +87,46 @@ export default function ForelasningarPage() {
           }}>
             Det viktigaste för mig när jag föreläser är kontakten med publiken. Jag vill beröra och nå in på djupet. Föreläsningarna ska skapa ökad förståelse, ge nya perspektiv och få människor att tänka ett varv till.
           </p>
+        </div>
+      </section>
+
+      {/* Föreläsar-bilder */}
+      <section style={{ padding: "72px 80px 0" }} className="tb-f-forelasar-bilder">
+        <div className="tb-f-forelasar-bilder-grid" style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 20,
+          maxWidth: 1100,
+          margin: "0 auto",
+        }}>
+          <div style={{
+            borderRadius: 4,
+            aspectRatio: "4/3",
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            <Image
+              src="/terese-tala.png"
+              alt="Terese Bengard föreläser"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center center" }}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
+          <div style={{
+            borderRadius: 4,
+            aspectRatio: "4/3",
+            position: "relative",
+            overflow: "hidden",
+          }}>
+            <Image
+              src="/terese-forelasa-scen.png"
+              alt="Terese Bengard på scen"
+              fill
+              style={{ objectFit: "cover", objectPosition: "center 75%" }}
+              sizes="(max-width: 900px) 100vw, 50vw"
+            />
+          </div>
         </div>
       </section>
 
@@ -202,8 +242,8 @@ export default function ForelasningarPage() {
             overflow: "hidden",
           }}>
             <Image
-              src="/terese-moderator-panel.jpg"
-              alt="Terese Bengard modererar panelsamtal"
+              src="/terese-moderera-panel.jpg"
+              alt="Terese Bengard modererar panelsamtal på Västernorrlandsdagen 2026"
               fill
               style={{ objectFit: "cover", objectPosition: "center center" }}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -216,8 +256,8 @@ export default function ForelasningarPage() {
             overflow: "hidden",
           }}>
             <Image
-              src="/terese-moderator-grupp.jpg"
-              alt="Terese Bengard med paneldeltagare"
+              src="/terese-scen-vasternorrland.jpg"
+              alt="Terese Bengard på scen på Västernorrlandsdagen"
               fill
               style={{ objectFit: "cover", objectPosition: "center center" }}
               sizes="(max-width: 900px) 100vw, 50vw"
@@ -249,7 +289,7 @@ export default function ForelasningarPage() {
       </section>
 
       {/* Moderator — passar för */}
-      <section style={{ background: "#2A1F1A", padding: "120px 80px" }} className="tb-format-section">
+      <section style={{ background: "#3B1142", padding: "120px 80px" }} className="tb-format-section">
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{
             fontFamily: "var(--font-sans)",
@@ -276,7 +316,7 @@ export default function ForelasningarPage() {
       </section>
 
       {/* Boksamtal */}
-      <section id="boksamtal" style={{ background: "#F5EEE9", padding: "120px 80px" }} className="tb-boksamtal-section">
+      <section id="boksamtal" style={{ background: "#F2E7F3", padding: "120px 80px" }} className="tb-boksamtal-section">
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{
             fontFamily: "var(--font-sans)",
@@ -312,14 +352,16 @@ export default function ForelasningarPage() {
         </div>
       </section>
 
-      <KontaktCTA />
+      <BokaCTA />
 
       <style>{`
         @media (max-width: 900px) {
           .tb-f-mod-bilder-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+          .tb-f-forelasar-bilder-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
         }
         @media (max-width: 768px) {
           .tb-f-intro { padding: 80px 32px 0 !important; }
+          .tb-f-forelasar-bilder { padding: 48px 32px 0 !important; }
           .tb-f-amnen { padding: 40px 32px 64px !important; }
           .tb-f-amnen > div > div { padding: 36px 28px !important; }
           .tb-mod-section { padding: 0 32px 24px !important; }

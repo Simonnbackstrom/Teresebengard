@@ -1,8 +1,13 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Image from "next/image";
 
-export default function KontaktCTA() {
+type KontaktCTAProps = {
+  image?: { src: string; alt: string };
+};
+
+export default function KontaktCTA({ image }: KontaktCTAProps = {}) {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -47,11 +52,44 @@ export default function KontaktCTA() {
           pointerEvents: "none",
         }}
       >
-        <path d="M0,220 C180,180 320,260 520,220 C720,180 880,260 1080,220 C1240,190 1360,240 1440,210 L1440,320 L0,320 Z" fill="#F0E5DA" />
-        <path d="M0,260 C220,220 380,280 600,250 C820,220 980,290 1200,260 C1320,244 1400,270 1440,258 L1440,320 L0,320 Z" fill="#E5D6C6" />
+        <path d="M0,220 C180,180 320,260 520,220 C720,180 880,260 1080,220 C1240,190 1360,240 1440,210 L1440,320 L0,320 Z" fill="#E8D4EB" />
+        <path d="M0,260 C220,220 380,280 600,250 C820,220 980,290 1200,260 C1320,244 1400,270 1440,258 L1440,320 L0,320 Z" fill="#D5B5DB" />
       </svg>
 
-      <div style={{ maxWidth: 680, margin: "0 auto", padding: "120px 80px", position: "relative", zIndex: 1 }} className="tb-form-wrap">
+      <div
+        style={{
+          maxWidth: image ? 1200 : 680,
+          margin: "0 auto",
+          padding: "120px 80px",
+          position: "relative",
+          zIndex: 1,
+          display: image ? "grid" : "block",
+          gridTemplateColumns: image ? "1fr 1fr" : undefined,
+          gap: image ? 72 : undefined,
+          alignItems: image ? "center" : undefined,
+        }}
+        className={image ? "tb-form-wrap tb-form-wrap-split" : "tb-form-wrap"}
+      >
+        {image && (
+          <div
+            className="tb-form-image"
+            style={{
+              borderRadius: 4,
+              aspectRatio: "4/5",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              style={{ objectFit: "cover", objectPosition: "center top" }}
+              sizes="(max-width: 900px) 100vw, 45vw"
+            />
+          </div>
+        )}
+        <div>
         <p style={{
           fontFamily: "var(--font-sans)",
           fontSize: 10, letterSpacing: "0.35em", textTransform: "uppercase",
@@ -118,9 +156,14 @@ export default function KontaktCTA() {
             </button>
           </form>
         )}
+        </div>
       </div>
 
       <style>{`
+        @media (max-width: 900px) {
+          .tb-form-wrap-split { grid-template-columns: 1fr !important; gap: 48px !important; }
+          .tb-form-image { max-width: 480px; margin: 0 auto; width: 100%; }
+        }
         @media (max-width: 768px) {
           .tb-form-wrap { padding: 80px 32px !important; }
           .tb-form-row { grid-template-columns: 1fr !important; }

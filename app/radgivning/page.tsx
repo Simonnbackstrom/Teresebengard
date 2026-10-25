@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import PageHero from "@/components/PageHero";
-import KontaktCTA from "@/components/KontaktCTA";
+import BokaCTA from "@/components/BokaCTA";
 
 export const metadata: Metadata = {
   title: "Rådgivning & processledning – Terese Bengard",
@@ -57,22 +57,28 @@ export default function RadgivningPage() {
               fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
               lineHeight: 1.75,
               color: "rgba(28,20,16,0.7)",
+              margin: "0 0 20px",
+            }}>
+              Behöver du stöd i strategiarbete eller utveckling av större satsningar? Det kan vara att skapa dialogprocesser eller utvecklingsarbete i organisationen eller bygden. Terese tar rollen som processledare, håller ihop arbetet, ställer de svåra frågorna och ser till att alla röster kommer in.
+            </p>
+            <p style={{
+              fontSize: "clamp(1.05rem, 1.4vw, 1.2rem)",
+              lineHeight: 1.75,
+              color: "rgba(28,20,16,0.7)",
               margin: 0,
             }}>
-              Kan omfatta workshops, dialogprocesser, strategiarbete eller utveckling av
-              större satsningar. Terese tar rollen som processledare, håller ihop
-              arbetet, ställer de svåra frågorna och ser till att alla röster kommer in.
+              Eller behöver ni stöd, rådgivning eller bara ett bollplank i frågor som har med landsbygdsutveckling, att inkludera platsperspektiv i organisationen eller policies? Med mångåriga erfarenheter hjälper Terese att navigera och förstärka platsperspektivet för att skapa skillnad.
             </p>
           </div>
           <div style={{
             borderRadius: 4,
-            aspectRatio: "2/3",
+            aspectRatio: "4/5",
             position: "relative",
             overflow: "hidden",
           }}>
             <Image
-              src="/terese-sy.jpg"
-              alt="Hand med nål och tråd vid sjön"
+              src="/terese-rosa-staende.jpg"
+              alt="Terese Bengard vid sjön"
               fill
               style={{ objectFit: "cover", objectPosition: "center center" }}
               sizes="(max-width: 900px) 100vw, 45vw"
@@ -98,7 +104,7 @@ export default function RadgivningPage() {
           }} className="tb-r-grid">
             {omraden.map((o, i) => (
               <div key={i} style={{
-                background: "#F5EEE9",
+                background: "#F2E7F3",
                 borderRadius: 8,
                 padding: "36px 40px",
                 display: "flex",
@@ -129,7 +135,7 @@ export default function RadgivningPage() {
         </div>
       </section>
 
-      <KontaktCTA />
+      <BokaCTA />
 
       <style>{`
         @media (max-width: 900px) {

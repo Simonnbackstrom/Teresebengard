@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <main style={{ background: "#FDFAF8", paddingTop: 80 }}>
-      <KontaktCTA />
+      <KontaktCTA image={{ src: "/terese-leende.jpg", alt: "Terese Bengard porträtt" }} />
     </main>
   );
 }

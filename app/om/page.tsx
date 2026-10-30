@@ -4,8 +4,16 @@ import PageHero from "@/components/PageHero";
 import BokaCTA from "@/components/BokaCTA";
 
 export const metadata: Metadata = {
-  title: "Om Terese – Terese Bengard",
-  description: "Terese Bengard är föreläsare, författare och kommunikatör med fokus på landsbygdsfrågor och platsperspektiv.",
+  title: "Om Terese",
+  description:
+    "Terese Bengard är föreläsare, författare och kommunikatör med fokus på landsbygdsfrågor och platsperspektiv.",
+  alternates: { canonical: "/om" },
+  openGraph: {
+    url: "/om",
+    title: "Om Terese – Terese Bengard",
+    description:
+      "Terese Bengard är föreläsare, författare och kommunikatör med fokus på landsbygdsfrågor och platsperspektiv.",
+  },
 };
 
 const meriter = [

@@ -4,8 +4,16 @@ import PageHero from "@/components/PageHero";
 import BokaCTA from "@/components/BokaCTA";
 
 export const metadata: Metadata = {
-  title: "Föreläsare och moderator – Terese Bengard",
-  description: "Boka Terese Bengard som föreläsare eller moderator. Föreläsningar om landsbygdsfrågor, urban norm och beredskap – samt moderatorskap och boksamtal.",
+  title: "Föreläsare och moderator",
+  description:
+    "Boka Terese Bengard som föreläsare eller moderator. Föreläsningar om landsbygdsfrågor, urban norm och beredskap – samt moderatorskap och boksamtal.",
+  alternates: { canonical: "/forelasningar" },
+  openGraph: {
+    url: "/forelasningar",
+    title: "Föreläsare och moderator – Terese Bengard",
+    description:
+      "Boka Terese Bengard som föreläsare eller moderator. Föreläsningar om landsbygdsfrågor, urban norm och beredskap.",
+  },
 };
 
 const amnen = [

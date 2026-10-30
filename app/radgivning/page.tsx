@@ -4,8 +4,16 @@ import PageHero from "@/components/PageHero";
 import BokaCTA from "@/components/BokaCTA";
 
 export const metadata: Metadata = {
-  title: "Rådgivning & processledning – Terese Bengard",
-  description: "Terese Bengard leder processer och ger strategisk rådgivning inom landsbygdssäkring, platsutveckling, remisser och kommunikation.",
+  title: "Rådgivning & processledning",
+  description:
+    "Terese Bengard leder processer och ger strategisk rådgivning inom landsbygdssäkring, platsutveckling, remisser och kommunikation.",
+  alternates: { canonical: "/radgivning" },
+  openGraph: {
+    url: "/radgivning",
+    title: "Rådgivning & processledning – Terese Bengard",
+    description:
+      "Strategisk rådgivning inom landsbygdssäkring, platsutveckling, remisser och kommunikation.",
+  },
 };
 
 const omraden = [

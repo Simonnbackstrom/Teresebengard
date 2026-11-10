@@ -18,10 +18,13 @@ export default function Navbar() {
 
   useEffect(() => { setMenuOpen(false); }, [pathname]);
 
+  if (pathname?.startsWith("/admin")) return null;
+
   const navLinks = [
     { label: "Om mig", href: "/om" },
     { label: "Föreläsare och moderator", href: "/forelasningar" },
     { label: "Rådgivning", href: "/radgivning" },
+    { label: "Blogg", href: "/blogg" },
     { label: "Kontakt", href: "/kontakt" },
   ];
 

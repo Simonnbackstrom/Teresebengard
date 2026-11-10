@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+  if (pathname?.startsWith("/admin")) return null;
 
   return (
     <footer style={{ background: "#ffffff", color: "#1C1410", borderTop: "1px solid rgba(28,20,16,0.08)" }}>
@@ -47,6 +50,7 @@ export default function Footer() {
               { label: "Om mig", href: "/om" },
               { label: "Föreläsare och moderator", href: "/forelasningar" },
               { label: "Rådgivning", href: "/radgivning" },
+              { label: "Blogg", href: "/blogg" },
               { label: "Kontakt", href: "/kontakt" },
             ].map((link) => (
               <Link key={link.label} href={link.href} style={{
@@ -147,7 +151,14 @@ export default function Footer() {
           fontFamily: "var(--font-display)",
           fontSize: 12,
           color: "rgba(28,20,16,0.5)",
-        }}>© {year} På Plats AB · Terese Bengard</span>
+        }}>
+          © {year} På Plats AB · Terese Bengard
+          <Link href="/admin" style={{
+            marginLeft: 12,
+            color: "rgba(28,20,16,0.3)",
+            textDecoration: "none",
+          }}>· Admin</Link>
+        </span>
         <a
           href="https://dinmedia.co"
           target="_blank"

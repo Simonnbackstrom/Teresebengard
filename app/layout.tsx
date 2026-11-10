@@ -26,7 +26,7 @@ const pinyon = Pinyon_Script({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://teresebengard.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bengard.se";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

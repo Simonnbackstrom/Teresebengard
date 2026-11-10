@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { error } = await resend.emails.send({
-    from: "Bokningsformulär <noreply@bengard.se>",
+    from: "Bokningsformulär <onboarding@resend.dev>",
     to: "terese@bengard.se",
     replyTo: epost,
     subject: `Bokningsförfrågan från ${organisation}`,
